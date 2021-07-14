@@ -1,0 +1,40 @@
+.footer {
+  background-color: black;
+  z-index: -1;
+}
+
+.bottom {
+  height: 4vh;
+}
+
+.copywrite {
+  margin: 0px;
+  color: white;
+  font-size: 1rem;
+  float: right;
+  margin-right: 1rem;
+}
+
+nav a,
+nav p {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+nav a:hover {
+  color: rgb(10, 136, 179);
+  cursor: pointer;
+}
+
+nav {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.top {
+  margin-bottom: 1rem;
+}
