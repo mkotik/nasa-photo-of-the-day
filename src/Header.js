@@ -1,6 +1,5 @@
 import React, { useState, useHook } from "react";
 import logo from "./assets/nasaLogo.png";
-import "./HeaderStyles.css";
 import styled from "styled-components";
 
 const HeaderWrap = styled.header`
@@ -49,7 +48,7 @@ function Header(props) {
       </LogoBox>
       <HeaderText>
         <MainText>NASA | Daily Serving</MainText>
-        <SubText className="date">{date}</SubText>
+        <SubText>{date}</SubText>
       </HeaderText>
     </HeaderWrap>
   );

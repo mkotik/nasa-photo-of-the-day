@@ -1,31 +1,77 @@
 import React, { useState } from "react";
-import "./FooterStyles.css";
+import styled from "styled-components";
+
+const FooterWrap = styled.section`
+  background-color: black;
+  z-index: -1;
+`;
+
+const TopDiv = styled.div`
+  margin-bottom: 1rem;
+`;
+
+const BottomDiv = styled.div`
+  height: 4vh;
+`;
+
+const Copywrite = styled.h3`
+  margin: 0px;
+  color: white;
+  font-size: 1rem;
+  float: right;
+  margin-right: 3rem;
+`;
+
+const Separator = styled.p`
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+`;
+
+const NavWrap = styled.nav`
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+`;
+
+const Links = styled.a`
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+
+  &:hover {
+    color: rgb(10, 136, 179);
+    cursor: pointer;
+  }
+`;
 
 function Footer() {
   return (
-    <section className="footer">
-      <div className="top">
-        <nav>
-          <a
+    <FooterWrap>
+      <TopDiv>
+        <NavWrap>
+          <Links
             href="https://github.com/mkotik/nasa-photo-of-the-day/tree/marat-kotik"
             target="_blank"
           >
             Repository
-          </a>
-          <p> | </p>
-          <a href="https://github.com/mkotik" target="_blank">
+          </Links>
+          <Separator> | </Separator>
+          <Links href="https://github.com/mkotik" target="_blank">
             Github
-          </a>
-          <p> | </p>
-          <a href="https://www.linkedin.com/in/maratkotik/" target="_blank">
+          </Links>
+          <Separator> | </Separator>
+          <Links href="https://www.linkedin.com/in/maratkotik/" target="_blank">
             Linkedin
-          </a>
-        </nav>
-      </div>
-      <div className="bottom">
-        <h3 className="copywrite">© Marat Kotik</h3>
-      </div>
-    </section>
+          </Links>
+        </NavWrap>
+      </TopDiv>
+      <BottomDiv>
+        <Copywrite>© Marat Kotik</Copywrite>
+      </BottomDiv>
+    </FooterWrap>
   );
 }
 
