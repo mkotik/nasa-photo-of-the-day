@@ -20,7 +20,7 @@ function Video(props) {
       <div className="videoBox">
         <iframe
           width="100%"
-          height="340"
+          height="440"
           src={videoURL}
           title="YouTube video player"
           frameBorder="0"
