@@ -26,8 +26,9 @@ const dateFormatter = function (origDate) {
 function App() {
   const [date, setDate] = useState(null);
   const [explanation, setExplanation] = useState(null);
-  const [videoTitle, setVideoTitle] = useState(null);
-  const [videoURL, setVideoURL] = useState(null);
+  const [mediaTitle, setMediaTitle] = useState(null);
+  const [mediaURL, setMediaURL] = useState(null);
+  const [mediaType, setMediaType] = useState(null);
   useEffect(() => {
     axios
       .get(URL)
@@ -35,8 +36,9 @@ function App() {
         console.log(res.data);
         setDate(dateFormatter(res.data.date));
         setExplanation(res.data.explanation);
-        setVideoTitle(res.data.title);
-        setVideoURL(res.data.url);
+        setMediaTitle(res.data.title);
+        setMediaURL(res.data.url);
+        setMediaType(res.data.media_type);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -47,8 +49,9 @@ function App() {
 
       <MainContent
         explanation={explanation}
-        videoTitle={videoTitle}
-        videoURL={videoURL}
+        mediaTitle={mediaTitle}
+        mediaURL={mediaURL}
+        mediaType={mediaType}
       />
       <Footer />
     </div>
